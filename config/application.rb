@@ -12,7 +12,12 @@ module AuthorlyRails
     config.load_defaults 7.0
 
     # Configuration for the application, engines, and railties goes here.
-    #
+    
+    config.generators do |g|
+      g.test_framework :rspec, fixture: false
+      g.fixture_framework :factory_bot
+    end
+
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #
