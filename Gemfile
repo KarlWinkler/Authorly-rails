@@ -24,7 +24,6 @@ gem 'dotenv-rails'
 
 group :development, :test do
   gem 'awesome_print'
-  gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 4.0.1'
   gem 'shoulda-matchers'
   gem 'factory_bot_rails'
