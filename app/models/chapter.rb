@@ -1,6 +1,5 @@
 class Chapter < ApplicationRecord
+  belongs_to :book
 
-    belongs_to :book
-
-    attr_accessor :content, :index
+  attr_accessor :content, :index
 end

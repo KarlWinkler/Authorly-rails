@@ -1,0 +1,15 @@
+AllCops:
+  NewCops: disable
+
+  Exclude:
+    - Guardfile
+    - bin/*
+    - db/*
+    - node_modules/**/*
+    - vendor/**/*
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
