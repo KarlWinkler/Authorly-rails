@@ -1,5 +1,7 @@
 <h1>books</h1>
 
 <% books.each do |book| %>
-    <p><%= book.title %></p>
+    <a href=/books/<%= book.id %>>
+    <%= render partial: 'display', locals: { book: book, scale: "10%" } %>
+    </a><br><br>
 <% end %>

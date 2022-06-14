@@ -1,11 +1,5 @@
 class Book < ApplicationRecord
-    
-    has_many :chapters
-    #has-a Author
-    #has-a
+  has_many :chapters
 
-    validates :title, presence: true
-
-    attr_accessor :title, :author, :image_url
-
+  validates :title, presence: true, uniqueness: true
 end

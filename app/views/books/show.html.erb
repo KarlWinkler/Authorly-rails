@@ -1,1 +1,5 @@
-<p><%= book.title %></p>
+<%= render partial: 'display', locals: { book:book, scale: "25%" } %>
+
+<p>Title: <%= book.title %></p>
+<p>Author: <%= book.author %></p>
+
