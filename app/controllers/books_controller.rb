@@ -11,12 +11,12 @@ class BooksController < ApplicationController
 
   def new
     @book = Book.new
+    render :new, locals: { book: @book }
   end
 
   def create
-    @book = Book.new(book_params)
-
-    if @book.save!
+    @book = Book.new book_params
+    if @book.save
       redirect_to @book
     else
       render :new, status: :unprocessable_entity
@@ -24,7 +24,7 @@ class BooksController < ApplicationController
   end
 
   private
-
+  
   def book_params
     params.require(:book).permit(:title, :author, :image_url)
   end
