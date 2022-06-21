@@ -9,7 +9,7 @@ class BooksController < ApplicationController
     render :show, locals: { book: @book }
   end
 
-  def news
+  def new
     @book = Book.new
     render :new, locals: { book: @book }
   end
@@ -24,8 +24,8 @@ class BooksController < ApplicationController
   end
 
   private
-
+  
   def book_params
-    params.require(:article).permit(:title, :body)
+    params.require(:book).permit(:title, :author, :image_url)
   end
 end
