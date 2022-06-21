@@ -1,1 +1,14 @@
-<p><%= book.title %></p>
+<%= render partial: 'templates/book', locals: { book:book, scale: "25%" } %>
+
+<p>Title: <%= book.title %></p>
+<p>Author: <%= book.author %></p>
+
+<br>
+<br>
+<h3>Chapters</h3>
+<% book.chapters.each do |chapter| %>
+    <a href=<%= "#{book.id}/chapters/#{chapter.id}" %>>
+    <%= render partial: 'templates/chapter', locals: { chapter: chapter } %>
+    </a><br><br>
+<% end %>
+<a href= <%="#{book.id}/chapters/new"%> >Edit</a>
