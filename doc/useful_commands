@@ -1,0 +1,18 @@
+# useful commands
+
+`bundle`  
+`rails s`  
+`rails c`  
+`sudo -u postgres psql -p 5433`  
+`guard`  
+`rails routes`  
+` `    
+` `    
+
+# aliases
+
+## copy to bash
+
+`alias authorly='cd Documents/Authorly-rails/'`  
+`alias postgres='sudo -u postgres psql -p 5433'`  
+`alias start='rails s'`  

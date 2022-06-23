@@ -1,0 +1,25 @@
+# for ubuntu 20.22.4 (probably works on most linux and mac)
+## versions
+|           | version |
+| ------    | ------- |
+| ruby      |  3.0.0  |
+| rails     |  7.0.3  |
+| postgres  |  14.2   |
+
+## steps to get started
+1. clone the repository at https://github.com/KarlWinkler/Authorly-rails
+
+1. cd into repository folder
+
+1. run `bundle`
+
+1. start the server with `rails s`  
+` `  
+` `  
+
+## extras
+
+pry for debugging  
+guard to run rspec unit tests  
+
+set up aliases in .bashrc
