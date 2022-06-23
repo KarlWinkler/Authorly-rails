@@ -1,8 +1,8 @@
 class ChaptersController < ApplicationController
   def new
-    @chapter = Chapter.new
     @book = Book.find(params[:book_id])
-    render :new, locals: { chapter: @chapter, book: @book }
+    book.chapters.new(chapter_params).save
+    redirect_to book_path(book), locals: { chapter: @chapter, book: book }
   end
 
   def create
@@ -17,11 +17,19 @@ class ChaptersController < ApplicationController
 
   private
 
+  attr_accessor :book
+
   def chapter_params
     {
-      index: Book.chapters.last.index + 1,
-      content: nil,
+      index: next_index,
+      contents: nil,
       book_id: params[:book_id]
     }
+  end
+
+  def next_index
+    return 1 if book.chapters.empty?
+
+    book.chapters.last.index + 1
   end
 end

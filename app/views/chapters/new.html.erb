@@ -1,3 +1,5 @@
+<%# this should not exist unless its only purpose is to create a chapter (maybe if I want to to make chapter creation more robust later ) %>
+
 <%= render partial: 'templates/book', locals: { book:book, scale: "25%" } %>
 
 <p>Title: <%= book.title %></p>
@@ -11,8 +13,6 @@
     <%= render partial: 'templates/chapter', locals: { chapter: chapter } %>
     </a><br><br>
 <% end %>
-
-<h1>New Book</h1>
 
 <%= form_with model: [book, chapter] do |f| %>
   <div>
