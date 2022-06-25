@@ -1,5 +1,3 @@
-<%# this should not exist unless its only purpose is to create a chapter (maybe if I want to to make chapter creation more robust later ) %>
-
 <%= render partial: 'templates/book', locals: { book:book, scale: "25%" } %>
 
 <p>Title: <%= book.title %></p>
@@ -9,13 +7,9 @@
 <br>
 <h3>Chapters</h3>
 <% book.chapters.each do |chapter| %>
-    <a href=/chapter/<%= chapter.id %>>
+    <a href=<%= book_chapter_path(book_id: book.id, id: chapter.id)  %>>
     <%= render partial: 'templates/chapter', locals: { chapter: chapter } %>
     </a><br><br>
 <% end %>
 
-<%= form_with model: [book, chapter] do |f| %>
-  <div>
-    <%= f.submit %>
-  </div>
-<%end%>
+<%= link_to 'New Chapter', new_book_chapter_path(book_id: book.id) %>

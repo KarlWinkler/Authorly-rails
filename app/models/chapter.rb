@@ -4,6 +4,8 @@ class Chapter < ApplicationRecord
   validates :index, presence: true
 
   def blurb
+    return '...' if contents.nil?
+
     "#{contents[0, blurb_length]}..."
   end
 

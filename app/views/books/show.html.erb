@@ -1,5 +1,8 @@
 <%= render partial: 'templates/book', locals: { book:book, scale: "25%" } %>
 
+<%= link_to 'Edit', edit_book_path(book)%>
+
+
 <p>Title: <%= book.title %></p>
 <p>Author: <%= book.author %></p>
 
@@ -11,4 +14,3 @@
     <%= render partial: 'templates/chapter', locals: { chapter: chapter } %>
     </a><br><br>
 <% end %>
-<a href= <%="#{book.id}/chapters/new"%> >Edit</a>
