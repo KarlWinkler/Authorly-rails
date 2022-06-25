@@ -29,7 +29,7 @@ class BooksController < ApplicationController
   end
 
   private
-  
+
   def book_params
     params.require(:book).permit(:title, :author, :image_url)
   end
