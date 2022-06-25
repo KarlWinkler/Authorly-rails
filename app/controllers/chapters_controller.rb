@@ -2,7 +2,7 @@ class ChaptersController < ApplicationController
   def new
     @book = Book.find(params[:book_id])
     book.chapters.new(chapter_params).save
-    redirect_to book_path(book), locals: { chapter: @chapter, book: book }
+    redirect_to edit_book_path(book), locals: { chapter: @chapter, book: book }
   end
 
   def create

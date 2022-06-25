@@ -1,8 +1,5 @@
 <%= render partial: 'templates/book', locals: { book:book, scale: "25%" } %>
 
-<%= link_to 'Edit', edit_book_path(book)%>
-
-
 <p>Title: <%= book.title %></p>
 <p>Author: <%= book.author %></p>
 
@@ -10,7 +7,9 @@
 <br>
 <h3>Chapters</h3>
 <% book.chapters.each do |chapter| %>
-    <a href=<%= "#{book.id}/chapters/#{chapter.id}" %>>
+    <a href=<%= book_chapter_path(book_id: book.id, id: chapter.id)  %>>
     <%= render partial: 'templates/chapter', locals: { chapter: chapter } %>
     </a><br><br>
 <% end %>
+
+<%= link_to 'New Chapter', new_book_chapter_path(book_id: book.id) %>

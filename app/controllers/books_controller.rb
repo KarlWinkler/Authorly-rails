@@ -9,6 +9,11 @@ class BooksController < ApplicationController
     render :show, locals: { book: @book }
   end
 
+  def edit
+    @book = Book.find(params[:id])
+    render :edit, locals: { book: @book }
+  end
+
   def new
     @book = Book.new
     render :new, locals: { book: @book }
