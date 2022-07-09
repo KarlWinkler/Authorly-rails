@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe 'Book::Show', type: :request do
-  let(:book) { create(:book) }
+  let(:author) { create(:author) }
+  let(:book) { create(:book, author_id: author.id) }
 
   describe 'GET /book/show' do
     it 'loads the page' do
