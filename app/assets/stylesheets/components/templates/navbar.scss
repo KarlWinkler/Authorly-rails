@@ -1,0 +1,10 @@
+.Navbar {
+  display: flex;
+  margin: 0;
+  padding: var(--padding-1);
+
+  background-color: var(--colour-primary);
+  justify-content: center;
+  
+  box-shadow: var(--box-shadow);
+}

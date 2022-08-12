@@ -1,0 +1,14 @@
+body{
+  margin: 0;
+  font-family: 'Futura', sans-serif;
+  color: var(--colour-tertiary);
+
+  background-color: var(--colour-secondary);
+}
+
+a {
+
+  text-decoration: none;
+  color: var(--colour-tertiary);
+  border: 1px solid var(--colour-highlight);
+}
