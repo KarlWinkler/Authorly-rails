@@ -1,0 +1,18 @@
+.BookImage {
+  border: var(--highlight-border);
+}
+
+.BookImage--small {
+  height: var(--scale-small);
+  width: auto;
+}
+
+.BookImage--medium {
+  height: var(--scale-medium);
+  width: auto;
+}
+
+.BookImage--large {
+  height: var(--scale-large);
+  width: auto;
+}

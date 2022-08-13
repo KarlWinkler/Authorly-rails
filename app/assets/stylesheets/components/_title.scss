@@ -1,3 +1,13 @@
 .Title {
-  display: block; // not used
+  display: block;
+  text-align: center;
+  margin-top: var(--spacing-3);
+  margin-bottom: var(--spacing-5);
+  padding: var(--spacing-1);
+  background-color: var(--colour-primary);
+  box-shadow: var(--box-shadow-top), var(--box-shadow-bottom);
+}
+
+.Title--name {
+  display: inline;
 }

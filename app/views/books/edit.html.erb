@@ -1,15 +1,13 @@
-<%= render partial: 'templates/book', locals: { book:book, scale: "25%" } %>
+<%= render partial: 'templates/book', locals: { book: book, classes_for_book: "Book--medium" } %>
 
 <p>Title: <%= book.title %></p>
 <p>Author: <%= book.author %></p>
 
-<br>
-<br>
 <h3>Chapters</h3>
 <% book.chapters.each do |chapter| %>
     <a href=<%= book_chapter_path(book_id: book.id, id: chapter.id)  %>>
     <%= render partial: 'templates/chapter', locals: { chapter: chapter } %>
-    </a><br><br>
+    </a>
 <% end %>
 
 <%= link_to 'New Chapter', new_book_chapter_path(book_id: book.id) %>
