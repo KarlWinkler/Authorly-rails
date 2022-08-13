@@ -1,0 +1,23 @@
+.CardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+}
+
+@media screen and (max-width: $breakpoint-large) {
+  .CardContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: $breakpoint-medium) {
+  .CardContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: $breakpoint-small) {
+  .CardContainer {
+    grid-template-columns: 1fr;
+  }
+}

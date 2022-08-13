@@ -1,0 +1,26 @@
+body{
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  font-family: 'Futura', sans-serif;
+  color: var(--colour-tertiary);
+
+  background-color: var(--colour-secondary);
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--colour-tertiary);
+  border: 1px solid var(--colour-highlight);
+}
+
+a:link { text-decoration: none; }
+
+a:visited { text-decoration: none; }
+
+a:hover { text-decoration: none; }
+
+a:active { text-decoration: none; }

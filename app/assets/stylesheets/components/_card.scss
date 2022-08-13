@@ -1,0 +1,44 @@
+.Card {
+  margin-top: var(--spacing-2);
+}
+
+.Card--small {
+  height: var(--scale-small);
+  width: auto;
+}
+
+.Card--medium {
+  height: var(--scale-medium);
+  width: auto;
+}
+
+.Card--large {
+  height: var(--scale-large);
+  width: auto;
+}
+
+.Card--select-card {
+  display: inline-block;
+  margin: 0 var(--spacing-1);
+  margin-bottom: var(--spacing-2);
+  padding: var(--spacing-1);
+}
+
+.Card--select-card:hover {
+  transition: all .5s ease-out;
+
+  background-color: var(--colour-light);
+  color: var(--colour-secondary);
+  transform: scale(1.10, 1.10);
+  border-radius: var(--border-radius-1);
+
+  p {
+    transition: all .5s ease-out;
+    transform: scale(1.50, 1.50);
+  }
+
+  img {
+    transition: all .5s ease-out;
+    border-radius: var(--border-radius-1);
+  }
+}

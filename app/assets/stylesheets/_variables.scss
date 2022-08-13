@@ -1,0 +1,41 @@
+body {
+
+  // colour scheme
+  --colour-primary: #333333;
+  --colour-secondary: #1a1a1a;
+  --colour-tertiary: #c44bac;
+  --colour-light: #F5B7BC;
+
+  // shadow
+  --box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  --box-shadow-top: 0 -4px 8px rgba(0, 0, 0, 0.3);
+  --box-shadow-bottom: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+  // border
+  --highlight-border: 1px solid var(--colour-tertiary);
+  --border-radius-1: 2%;
+  --border-radius-2: 5%;
+  --border-radius-3: 15%;
+
+  // spacing
+  --spacing-1: 0.5rem;
+  --spacing-2: 1rem;
+  --spacing-3: 1.5rem;
+  --spacing-4: 2rem;
+  --spacing-5: 2.5rem;
+  --spacing-6: 3rem;
+  --spacing-7: 3.5rem;
+  --spacing-8: 4rem;
+  --spacing-9: 5rem;
+
+  // scale
+  --scale-small: 9rem;
+  --scale-medium: 12rem;
+  --scale-large: 15rem;
+
+}
+
+//breakpoints
+$breakpoint-small: 768px;
+$breakpoint-medium: 1024px;
+$breakpoint-large: 1200px;

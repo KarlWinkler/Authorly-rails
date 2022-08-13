@@ -9,9 +9,9 @@ default: &default
 
 development:
   <<: *default
-  database: Authorly_development
+  database: authorly_development
 
 
 test:
   <<: *default
-  database: Authorly_test
+  database: authorly_test

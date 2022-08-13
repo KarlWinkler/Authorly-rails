@@ -1,0 +1,85 @@
+<div class="Card">
+  <div class="Card--<%= book.title %>">
+    <div class="Card--image"> </div>
+    <div class="Card--details">
+      <h1 class="Card--title"><%= book.title %></h1>
+      <p class="Card--author"><%= book.author.name %></p>
+    </div>
+  </div>
+</div>
+
+<style>
+.Card {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  
+  place-items: center;
+}
+
+.Card--<%= book.title %> {
+  background-color: var(--colour-light);
+  background-image: url(<%= book.image_url%>);
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+  padding: var(--spacing-1);
+}
+
+.Card--image {
+  border: var(--highlight-border);
+
+  height: ;
+
+}
+
+.Card--details {
+  z-index: 100;
+  color: var(--colour-primary);
+}
+
+.Card--<%= book.title %>:hover {
+  transition: all .5s ease-out;
+  background-position: center;
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  transform: scale(1.10, 1.10);
+  border-radius: var(--border-radius-1);
+  filter: contrast(0.4) brightness(1.5);
+}
+
+.Card--<%= book.title %>:hover::after {
+  transition: 0.2s all ease-out;
+  background-color: var(--colour-highlight);
+  opacity: 0.7;
+  z-index: 10;
+}
+
+
+.card {
+  margin-right: 25px;
+  transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+  background-color: #fff;
+  width: 33.3%;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
+}
+.card:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
+  transform: scale(1.10, 1.10);
+}
+
+.card:hover .card__img--hover {
+  height: 100%;
+  opacity: 0.3;
+}
+
+.card:hover .card__info {
+  background-color: transparent;
+  position: relative;
+}
+
+.card:hover .card__info-hover {
+    opacity: 1;
+}
+</style>

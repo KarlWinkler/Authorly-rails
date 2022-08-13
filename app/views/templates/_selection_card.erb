@@ -1,0 +1,21 @@
+<section class="SelectionCardWrapper">
+  <article class="SelectionCard SelectionCard--<%= book.classify %>">
+    <a href=/books/<%= book.id %>>
+    <div class="SelectionCard-info-hover">
+    </div>
+    <div class="SelectionCard-img"></div>
+       <div class="SelectionCard-img--hover"></div>
+    <div class="SelectionCard-info">
+      <span class="SelectionCard-category"><%= book.category %></span>
+      <h3 class="SelectionCard-title"><%= book.title %></h3>
+      <span class="SelectionCard-by">by <p href="#" class="SelectionCard-author" title="author"><%= book.author.name %></p></span>
+    </div>   
+    </a>
+  </article>
+</section>
+
+<style>
+.SelectionCard--<%= book.classify %> .SelectionCard-img, .SelectionCard--<%= book.classify %> .SelectionCard-img--hover {
+  background-image: url('<%= book.image_url %>');
+}
+</style>
