@@ -1,13 +1,9 @@
 <%= render partial: 'templates/book', locals: { book:book, classes_for_book: "BookImage-large" } %>
 
-<%= link_to 'Edit', edit_book_path(book)%>
-
-
+<%= link_to "edit", edit_authors_book_path if current_author == book.author%>
 <p>Title: <%= book.title %></p>
 <p>Author: <%= book.author.name %></p>
 
-<br>
-<br>
 <h3>Chapters</h3>
 <% book.chapters.each do |chapter| %>
     <a href=<%= "#{book.id}/chapters/#{chapter.id}" %>>

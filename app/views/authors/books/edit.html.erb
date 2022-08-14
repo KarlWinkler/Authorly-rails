@@ -1,5 +1,13 @@
 <%= render partial: 'templates/book', locals: { book: book, classes_for_book: "Book--medium" } %>
 
+<%= form_for :book, url: authors_book_path(book), method: :patch do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :image_url %>
+  <%= f.text_field :image_url %>
+  <%= f.submit %>
+<% end %>
+
 <p>Title: <%= book.title %></p>
 <p>Author: <%= book.author %></p>
 
@@ -10,4 +18,4 @@
     </a>
 <% end %>
 
-<%= link_to 'New Chapter', new_book_chapter_path(book_id: book.id) %>
+<%# <%= link_to 'New Chapter', new_book_chapter_path(book_id: book.id) %>

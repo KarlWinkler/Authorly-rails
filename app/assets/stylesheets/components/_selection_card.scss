@@ -1,5 +1,4 @@
 .SelectionCardWrapper {
-  width: fit-content;
   display: flex;
   display: -webkit-flex;
   justify-content: center;
@@ -8,9 +7,8 @@
 }
 
 .SelectionCard {
-  margin-right: 25px;
   transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
-  background-color: #fff;
+  background-color: var(--colour-light);
   width: 33.3%;
   border: 1px solid var(--colour-light);
   position: relative;
@@ -18,8 +16,7 @@
   overflow: hidden;
   box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
   min-width: 70%;
-  
-  }
+}
 
 .SelectionCard-img {
   visibility: hidden;
@@ -30,7 +27,6 @@
   height: 235px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-
 }
 
 .SelectionCard-info-hover {

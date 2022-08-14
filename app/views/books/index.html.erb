@@ -1,7 +1,3 @@
 <%= render partial: 'templates/title', locals: { title: 'Select A Book' } %>
 
-<div class="CardContainer">
-<% books.each do |book| %>
-    <%= render partial: 'templates/selection_card', locals: { book: book } %>
-<% end %>
-</div>
+<%= render partial: 'templates/books_list', locals: { books: books }%>

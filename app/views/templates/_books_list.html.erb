@@ -1,0 +1,5 @@
+<div class="CardContainer">
+<% books.each do |book| %>
+    <%= render partial: 'templates/selection_card', locals: { book: book } %>
+<% end %>
+</div>
