@@ -5,6 +5,7 @@
 
   background-color: var(--colour-primary);
   justify-content: center;
+  align-items: center;
   
   box-shadow: var(--box-shadow-bottom);
 }
@@ -12,4 +13,8 @@
 .Navbar-link {
   display: inline-block;
   color: var(--colour-light);
+}
+
+.Navbar-login-info {
+  margin-left: auto;
 }

@@ -14,20 +14,6 @@ class BooksController < ApplicationController
     render :edit, locals: { book: @book }
   end
 
-  def new
-    @book = Book.new
-    render :new, locals: { book: @book }
-  end
-
-  def create
-    @book = Book.new book_params
-    if @book.save
-      redirect_to @book
-    else
-      render :new, status: :unprocessable_entity
-    end
-  end
-
   private
 
   def book_params
